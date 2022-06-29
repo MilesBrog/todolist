@@ -22,13 +22,48 @@ p {
   margin-bottom: 10px;
 }
 
+.input-left, .ui {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-right {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
 .input-field form i {
   vertical-align: middle;
   padding-left: 5px;
 }
 
+.input-field .duration {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.duration .startDate {
+  width: calc(70px + 1vmax);
+}
+
+.duration .endDate {
+  width: calc(70px + 1vmax);
+}
+
+.save-success {
+  color: #51bd3b;
+}
+
+.save-fail {
+  color: #c53030;
+}
+
 input {
-  width: 40vmin;
+  flex: 100%;
   font-size: calc(10px + 1vmin);
 }
 
@@ -66,9 +101,21 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  word-break: break-word;
   flex: 1%;
 }
 
 .last > :last-child{
   margin-left: 10px;
+}
+
+@media (max-width: 425px) {
+  .duration .startDate {
+    width: 60px;
+  }
+  
+  .duration .endDate {
+    width: 60px;
+  }
 }
